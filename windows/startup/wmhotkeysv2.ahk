@@ -76,26 +76,12 @@ ToggleWindowsTerminal() {
     }
 }
 
-/*
-#b::ToggleFireFox()
-
-ToggleFireFox() {
-    ; Define the path to Firefox using the A_UserName variable
-    firefoxPath := "C:\Users\" A_UserName "\scoop\apps\firefox-nightly\current\firefox.exe"
-
-    if WinExist("ahk_exe firefox.exe") {
-        WinActivate
-    } else {
-        Run(firefoxPath)
-    }
-}
-*/
 
 #b::ToggleThorium()
 
 ToggleThorium() {
-    ; Define the path to Firefox using the A_UserName variable
-    thoriumPath := "C:\Users\" A_UserName "\scoop\apps\Thorium-Portable\current\BIN\thorium.exe"
+    ; Define the path to thorium using the A_UserName variable
+    thoriumPath := "C:\Users\" A_UserName "\scoop\apps\thorium-portable\current\BIN\thorium.exe"
 
     if WinExist("ahk_exe thorium.exe") {
         WinActivate
@@ -103,6 +89,7 @@ ToggleThorium() {
         Run(thoriumPath)
     }
 }
+
 
 /*
 #o::ToggleFireFoxAria2()
@@ -194,6 +181,7 @@ ToggleCalibre() {
     }
 }
 */
+
 
 /*
 #t::ToggleFoobar2K()
