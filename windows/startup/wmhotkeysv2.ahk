@@ -76,6 +76,8 @@ ToggleWindowsTerminal() {
     }
 }
 
+
+/*
 #b::ToggleFireFox()
 
 ToggleFireFox() {
@@ -88,6 +90,27 @@ ToggleFireFox() {
         Run(firefoxPath)
     }
 }
+*/
+
+#b::ToggleThorium()
+
+ToggleThorium() {
+    ; Define the path to thorium using the A_UserName variable
+    thoriumPath := "C:\Users\" A_UserName "\scoop\apps\thorium-portable\current\BIN\thorium.exe"
+
+    if WinExist("ahk_exe thorium.exe") {
+        WinActivate
+    } else {
+        Run(thoriumPath)
+    }
+}
+
+
+
+
+
+
+
 
 /*
 #o::ToggleFireFoxAria2()
@@ -179,6 +202,7 @@ ToggleCalibre() {
     }
 }
 */
+
 
 /*
 #t::ToggleFoobar2K()
