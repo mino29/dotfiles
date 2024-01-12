@@ -76,6 +76,7 @@ ToggleWindowsTerminal() {
     }
 }
 
+/*
 #b::ToggleFireFox()
 
 ToggleFireFox() {
@@ -86,6 +87,20 @@ ToggleFireFox() {
         WinActivate
     } else {
         Run(firefoxPath)
+    }
+}
+*/
+
+#b::ToggleThorium()
+
+ToggleThorium() {
+    ; Define the path to Firefox using the A_UserName variable
+    thoriumPath := "C:\Users\" A_UserName "\scoop\apps\Thorium-Portable\current\BIN\thorium.exe"
+
+    if WinExist("ahk_exe thorium.exe") {
+        WinActivate
+    } else {
+        Run(thoriumPath)
     }
 }
 
