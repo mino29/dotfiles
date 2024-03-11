@@ -270,7 +270,7 @@ launchOrSwitchDownloads() {
             Run("explorer shell:::{374DE290-123F-4565-9164-39C4925E467B}")
             WinWait("Downloads")
             WinActivate
-            WinMaxiMize
+           ; WinMaxiMize
         }
 }
 
