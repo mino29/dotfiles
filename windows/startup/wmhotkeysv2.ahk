@@ -77,16 +77,32 @@ ToggleWindowsTerminal() {
 }
 
 
+/*
 #b::ToggleThorium()
 
 ToggleThorium() {
     ; Define the path to thorium using the A_UserName variable
-    thoriumPath := "C:\Users\" A_UserName "\scoop\apps\thorium-portable\current\BIN\thorium.exe"
+    thoriumPath := "C:\Users\" A_UserName "\scoop\apps\thorium\current\BIN\thorium.exe"
 
     if WinExist("ahk_exe thorium.exe") {
         WinActivate
     } else {
         Run(thoriumPath)
+    }
+}
+*/
+
+#b::ToggleEdge()
+
+ToggleEdge() {
+    ; Define the path to thorium using the A_UserName variable
+    edgePath := "C:\Users\" A_UserName "\scoop\apps\edge\current\msedge.exe"
+
+    if WinExist("ahk_exe msedge.exe") {
+        WinActivate
+    } else {
+        Run('msedge')
+        ; Run(edgePath)
     }
 }
 
@@ -115,6 +131,17 @@ ToggleAriaGui(){
     }
 }
 
+/*
+#o::TogglethoriumAria2()
+
+TogglethoriumAria2() {
+    ; Define the path to thorium using the A_UserName variable
+    thoriumPath := "C:\Users\" A_UserName "\scoop\apps\thorium\current\BIN\thorium.exe"
+    aria2ManPath := "chrome-extension://mpkodccbngfoacfalldjimigbofkhgjn/ui/ariang/index.html#!/downloading"
+
+    Run(thoriumPath " " aria2ManPath)
+}
+*/
 
 /*
 ToggleNeatDM(){

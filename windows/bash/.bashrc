@@ -1,7 +1,7 @@
 # Enable the subsequent settings only in interactive sessions
 case $- in
-  *i*) ;;
-    *) return;;
+*i*) ;;
+*) return ;;
 esac
 
 # Path to your oh-my-bash installation.
@@ -81,9 +81,9 @@ OMB_USE_SUDO=true
 # Example format: completions=(ssh git bundler gem pip pip3)
 # Add wisely, as too many completions slow down shell startup.
 completions=(
-  git
-  composer
-  ssh
+	git
+	composer
+	ssh
 )
 
 # Which aliases would you like to load? (aliases can be found in ~/.oh-my-bash/aliases/*)
@@ -91,7 +91,7 @@ completions=(
 # Example format: aliases=(vagrant composer git-avh)
 # Add wisely, as too many aliases slow down shell startup.
 aliases=(
-  general
+	general
 )
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-bash/plugins/*)
@@ -99,10 +99,10 @@ aliases=(
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
-  bashmarks
-  pyenv
-  npm
+	git
+	bashmarks
+	pyenv
+	npm
 )
 
 # Which plugins would you like to conditionally load? (plugins can be found in ~/.oh-my-bash/plugins/*)
@@ -129,7 +129,6 @@ source "$OSH"/oh-my-bash.sh
 
 # Auto completion
 bind 'TAB:menu-complete'
-
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -161,55 +160,53 @@ alias potplayer="~/scoop/apps/potplayer/current/PotPlayer64.exe"
 # eval "$(zoxide init bash)"
 
 # resolve unwanted characters
-/c/Windows/System32/chcp.com 65001 > /dev/null 2>&1
+/c/Windows/System32/chcp.com 65001 >/dev/null 2>&1
 
 export LANG=en_US.UTF-8
-
 
 # Custom Functions
 
 open() {
-    if [ $# -eq 0 ]; then
-         explorer .
-    else
-        explorer "$1"
-    fi
+	if [ $# -eq 0 ]; then
+		explorer .
+	else
+		explorer "$1"
+	fi
 }
 
 pot() {
-    if [ $# -eq 0 ]; then
-         potplayer .
-    else
-        potplayer "$1"
-    fi
+	if [ $# -eq 0 ]; then
+		potplayer .
+	else
+		potplayer "$1"
+	fi
 }
 
 rn() {
-    if [ $# -eq 0 ]; then
-         renamer .
-    else
-        renamer "$1"
-    fi
+	if [ $# -eq 0 ]; then
+		renamer .
+	else
+		renamer "$1"
+	fi
 }
 
-
 flatten() {
-    # If no parameter is provided, use the current directory
-    if [ -z "$1" ]; then
-        source_directory="."
-    else
-        source_directory="$1"
-    fi
+	# If no parameter is provided, use the current directory
+	if [ -z "$1" ]; then
+		source_directory="."
+	else
+		source_directory="$1"
+	fi
 
-    # Move all files (including files in subdirectories) to the root directory
-    find "$source_directory" -type f -exec mv {} "$source_directory" \;
-    # Remove all files (directories)
-    find "$source_directory" -type d -empty -delete
-    # Delete empty directories in the source directory
-    find "$source_directory" -type f -size -200M -exec rm -rf {} \;
+	# Move all files (including files in subdirectories) to the root directory
+	find "$source_directory" -type f -exec mv {} "$source_directory" \;
+	# Remove all files (directories)
+	find "$source_directory" -type d -empty -delete
+	# Delete empty directories in the source directory
+	find "$source_directory" -type f -size -200M -exec rm -rf {} \;
 }
 
 # Launch zsh instead
 if [ -t 1 ]; then
-  exec zsh
+	exec zsh
 fi
