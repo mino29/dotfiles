@@ -23,6 +23,17 @@ EditCurrentScript() {
     Run(nvimPath " " A_ScriptFullPath)
 }
 
+
+; --------------------    Wechat    ---------------------------------
+
+#HotIf WinActive("ahk_exe WeChat.exe")
+^w:: Send "{esc}"
+
+
+
+
+
+
 ; ----------------------------------------------------------------------------
 
 #q::Send("!{F4}")
