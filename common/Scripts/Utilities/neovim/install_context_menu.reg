@@ -1,0 +1,31 @@
+Windows Registry Editor Version 5.00
+
+
+; This will handle right clicking on a file
+[HKEY_CLASSES_ROOT\*\shell\Open with Neovim]
+@="Edit with Neovim"
+"Icon"="\"C:\\Users\\mino29\\scoop\\apps\\neovim\\current\\bin\\nvim-qt.exe\",0"
+
+[HKEY_CLASSES_ROOT\*\shell\Open with Neovim\command]
+@="\"C:\\Users\\mino29\\scoop\\apps\\neovim\\current\\bin\\nvim.exe\" \"%1\""
+
+; This will handle right clicking on a folder and open that folder
+; as a new project
+
+[HKEY_CLASSES_ROOT\Directory\shell\neovim]
+@="Open in Neovim"
+"Icon"="\"C:\\Users\\mino29\\scoop\\apps\\neovim\\current\\bin\\nvim-qt.exe\",0"
+
+[HKEY_CLASSES_ROOT\Directory\shell\neovim\command]
+@="\"C:\\Users\\mino29\\scoop\\apps\\neovim\\current\\bin\\nvim.exe\" \"%1\""
+
+; This handles the case of right clicking inside of a folder
+; to open that folder as a new project
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\neovim]
+@="Open in Neovim"
+"Icon"="\"C:\\Users\\mino29\\scoop\\apps\\neovim\\current\\bin\\nvim-qt.exe\",0"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\neovim\command]
+@="\"C:\\Users\\mino29\\scoop\\apps\\neovim\\current\\bin\\nvim.exe\" \"%V\""
+

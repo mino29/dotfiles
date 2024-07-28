@@ -76,17 +76,30 @@ ToggleWindowsTerminal() {
     }
 }
 
-
+/*
 #b::ToggleThorium()
 
 ToggleThorium() {
     ; Define the path to thorium using the A_UserName variable
-    thoriumPath := "C:\Users\" A_UserName "\scoop\apps\thorium-portable\current\BIN\thorium.exe"
+    thoriumPath := "C:\Users\" A_UserName "\scoop\apps\thorium\current\BIN\thorium.exe"
 
     if WinExist("ahk_exe thorium.exe") {
         WinActivate
     } else {
         Run(thoriumPath)
+    }
+}
+*/
+
+#b::ToggleEdge()
+
+ToggleEdge() {
+    ; Define the path to Edge using the A_UserName variable
+
+    if WinExist("ahk_exe msedge.exe") {
+        WinActivate
+    } else {
+        Run('msedge')
     }
 }
 
@@ -96,7 +109,7 @@ ToggleThorium() {
 
 ToggleFireFoxAria2() {
     ; Define the path to Firefox using the A_UserName variable
-    firefoxPath := "C:\Users\" A_UserName "\scoop\apps\firefox-nightly\current\firefox.exe"
+    firefoxPath := "" A_UserName "\scoop\apps\firefox-nightly\current\firefox.exe"
     aria2ManPath := "moz-extension://d1b0427c-3c20-44fd-a490-cc12ffd7a04f/ui/ariang/index.html#!/downloading"
 
     Run(firefoxPath " " aria2ManPath)
