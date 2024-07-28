@@ -23,6 +23,17 @@ EditCurrentScript() {
     Run(nvimPath " " A_ScriptFullPath)
 }
 
+
+; --------------------    Wechat    ---------------------------------
+
+#HotIf WinActive("ahk_exe WeChat.exe")
+^w:: Send "{esc}"
+
+
+
+
+
+
 ; ----------------------------------------------------------------------------
 
 #q::Send("!{F4}")
@@ -76,6 +87,7 @@ ToggleWindowsTerminal() {
     }
 }
 
+
 /*
 #b::ToggleThorium()
 
@@ -99,7 +111,7 @@ ToggleEdge() {
     if WinExist("ahk_exe msedge.exe") {
         WinActivate
     } else {
-        Run('msedge')
+        Run("msedge")
     }
 }
 
@@ -128,6 +140,17 @@ ToggleAriaGui(){
     }
 }
 
+/*
+#o::TogglethoriumAria2()
+
+TogglethoriumAria2() {
+    ; Define the path to thorium using the A_UserName variable
+    thoriumPath := "C:\Users\" A_UserName "\scoop\apps\thorium\current\BIN\thorium.exe"
+    aria2ManPath := "chrome-extension://mpkodccbngfoacfalldjimigbofkhgjn/ui/ariang/index.html#!/downloading"
+
+    Run(thoriumPath " " aria2ManPath)
+}
+*/
 
 /*
 ToggleNeatDM(){
