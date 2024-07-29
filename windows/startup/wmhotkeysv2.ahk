@@ -26,6 +26,10 @@ EditCurrentScript() {
 
 ; --------------------    Wechat    ---------------------------------
 
+/*
+#HotIf WinActive("ahk_exe WeChat.exe")
+^w:: Send "{esc}"
+*/
 
 
 
@@ -160,6 +164,18 @@ ToggleNeatDM(){
 
 */
 
+#u::ToggleDict()
+
+ToggleDict(){
+    DictPath := "C:\Users\" A_UserName "\scoop\apps\goldendict\current\GoldenDict.exe"
+
+    if WinExist("ahk_exe GoldenDict.exe") {
+        WinActivate
+    } else {
+        Run(DictPath)
+    }
+}
+
 #n::EditTodayNotes()
 
 EditTodayNotes() {
@@ -244,6 +260,7 @@ ToggleSpotify() {
     }
 }
 
+/*
 #s::ToggleEverything()
 
 ToggleEverything() {
@@ -256,6 +273,21 @@ ToggleEverything() {
         Run(everythingPath)
     }
 }
+*/
+
+#s::ToggleEverythingToolBar()
+
+ToggleEverythingToolBar() {
+    ; Define the path to everything using the A_UserName variable
+    ; everythingToolBar := "C:\Users\" A_UserName "\scoop\apps\everything-alpha\current\Everything.exe"
+    everythingToolBarPath := "C:\Program Files (x86)\EverythingToolbar\EverythingToolbar.Launcher.exe"
+    if WinExist("ahk_exe EverythingToolbar.Launcher.exe") {
+          WinActivate
+      } else {
+          Run(everythingToolBarPath)
+      }
+}
+
 
 #j::ToggleQalculate()
 
