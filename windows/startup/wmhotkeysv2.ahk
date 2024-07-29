@@ -26,9 +26,6 @@ EditCurrentScript() {
 
 ; --------------------    Wechat    ---------------------------------
 
-#HotIf WinActive("ahk_exe WeChat.exe")
-^w:: Send "{esc}"
-
 
 
 
@@ -54,8 +51,6 @@ MinimizeActiveWindow() {
         WinMinimize("A")
     } ; "A" stands for the active window
 }
-
-
 
 #f::ToggleWindowSize()
 
@@ -102,36 +97,8 @@ ToggleThorium() {
     }
 }
 
-#b::ToggleEdge()
 
-ToggleEdge() {
-    ; Define the path to Edge using the A_UserName variable
-    if WinExist("ahk_exe msedge.exe") {
-        WinActivate
-    } else {
-        Run('msedge')
-    }
-}
-*/
-
-#b::ToggleEdge()
-
-ToggleEdge() {
-    ; Define the path to Edge using the A_ProgramFiles variable
-    edgePath := A_ProgramFiles "\Microsoft\Edge\Application\msedge.exe"
-    
-    ; Check if Edge is already running
-    if WinExist("ahk_exe msedge.exe") {
-        WinActivate("ahk_exe msedge.exe")
-    } else {
-        ; If Edge is not running, attempt to start it
-        if FileExist(edgePath) {
-            Run(edgePath)
-        } else {
-            MsgBox "Edge executable not found at:" edgePath
-        }
-    }
-}
+ 
 
 
 /*
@@ -145,6 +112,18 @@ ToggleFireFoxAria2() {
     Run(firefoxPath " " aria2ManPath)
 }
 */
+
+#b::ToggleEdge()
+
+ToggleEdge() {
+    ; Define the path to Edge using the A_UserName variable
+    if WinExist("ahk_exe msedge.exe") {
+        WinActivate
+    } else {
+        Run('msedge')
+    }
+}
+
 
 #o::ToggleAriaGui()
 
