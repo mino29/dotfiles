@@ -99,19 +99,35 @@ ToggleThorium() {
         Run(thoriumPath)
     }
 }
+
+#b::ToggleEdge()
+
+ToggleEdge() {
+    ; Define the path to Edge using the A_UserName variable
+    if WinExist("ahk_exe msedge.exe") {
+        WinActivate
+    } else {
+        Run('msedge')
+    }
+}
 */
 
 #b::ToggleEdge()
 
 ToggleEdge() {
-    ; Define the path to thorium using the A_UserName variable
-    edgePath := "C:\Users\" A_UserName "\scoop\apps\edge\current\msedge.exe"
-
+    ; Define the path to Edge using the A_ProgramFiles variable
+    edgePath := A_ProgramFiles "\Microsoft\Edge\Application\msedge.exe"
+    
+    ; Check if Edge is already running
     if WinExist("ahk_exe msedge.exe") {
-        WinActivate
+        WinActivate("ahk_exe msedge.exe")
     } else {
-        Run('msedge')
-        ; Run(edgePath)
+        ; If Edge is not running, attempt to start it
+        if FileExist(edgePath) {
+            Run(edgePath)
+        } else {
+            MsgBox "Edge executable not found at:" edgePath
+        }
     }
 }
 
@@ -121,7 +137,7 @@ ToggleEdge() {
 
 ToggleFireFoxAria2() {
     ; Define the path to Firefox using the A_UserName variable
-    firefoxPath := "C:\Users\" A_UserName "\scoop\apps\firefox-nightly\current\firefox.exe"
+    firefoxPath := "" A_UserName "\scoop\apps\firefox-nightly\current\firefox.exe"
     aria2ManPath := "moz-extension://d1b0427c-3c20-44fd-a490-cc12ffd7a04f/ui/ariang/index.html#!/downloading"
 
     Run(firefoxPath " " aria2ManPath)

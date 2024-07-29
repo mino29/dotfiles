@@ -1,0 +1,15 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Open with Advanced Renamer]
+@="Rename all with Advanced Renamer"
+"Icon"="\"C:\\Users\\mino29\\scoop\\apps\\advancedrenamer\\current\\ARen.exe\",0"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Open with Advanced Renamer\command]
+@="\"C:\\Users\\mino29\\scoop\\apps\\advancedrenamer\\current\\ARen.exe\" \"%V\""
+
+[HKEY_CLASSES_ROOT\Directory\shell\Open with Advanced Renamer]
+@="Rename all with Advanced Renamer"
+"Icon"="\"C:\\Users\\mino29\\scoop\\apps\\advancedrenamer\\current\\ARen.exe\",0"
+
+[HKEY_CLASSES_ROOT\Directory\shell\Open with Advanced Renamer\command]
+@="\"C:\\Users\\mino29\\scoop\\apps\\advancedrenamer\\current\\ARen.exe\" \"%1\""

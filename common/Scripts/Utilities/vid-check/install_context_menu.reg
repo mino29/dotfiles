@@ -1,0 +1,16 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\shell\Vid-check Directory]
+@="Check videos here..."
+"Icon"="imageres.dll,178"
+
+[HKEY_CLASSES_ROOT\Directory\shell\Vid-check Directory\command]
+@="\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -ExecutionPolicy Bypass -Command \"& {C:\\Scripts\\vid-check.ps1 '%1'}\""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Vid-check Directory]
+@="Check videos here..."
+"Icon"="imageres.dll,178"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Vid-check Directory\command]
+@="\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -ExecutionPolicy Bypass -Command \"& {C:\\Scripts\\vid-check.ps1 '%V'}\""
+

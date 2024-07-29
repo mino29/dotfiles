@@ -1,0 +1,15 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\shell\Flatten Directory]
+@="Flatten this folder..."
+"Icon"="\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\",0"
+
+[HKEY_CLASSES_ROOT\Directory\shell\Flatten Directory\command]
+@="\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -ExecutionPolicy Bypass -Command \"& {C:\\Scripts\\flatten.ps1 '%1'}\""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Flatten Directory]
+@="Flatten this folder..."
+"Icon"="\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\",0"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Flatten Directory\command]
+@="\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -ExecutionPolicy Bypass -Command \"& {C:\\Scripts\\flatten.ps1 '%V'}\""

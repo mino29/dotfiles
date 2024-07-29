@@ -1,0 +1,22 @@
+Windows Registry Editor Version 5.00
+
+
+; This will handle right clicking on a file
+[-HKEY_CLASSES_ROOT\*\shell\Open with Neovim]
+
+[-HKEY_CLASSES_ROOT\*\shell\Open with Neovim\command]
+
+; This will handle right clicking on a folder and open that folder
+; as a new project
+
+[-HKEY_CLASSES_ROOT\Directory\shell\neovim]
+
+[-HKEY_CLASSES_ROOT\Directory\shell\neovim\command]
+
+; This handles the case of right clicking inside of a folder
+; to open that folder as a new project
+
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\neovim]
+
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\neovim\command]
+
