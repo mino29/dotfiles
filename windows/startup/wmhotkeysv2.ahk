@@ -44,7 +44,7 @@ EditCurrentScript() {
 ^+d:: FileRecycleEmpty ; 清空回收站
 <#z::Send("{Volume_mute}") ; with gui prompt
 
-#h::MinimizeActiveWindow()
+; #h::MinimizeActiveWindow()
 
 #m::MinimizeActiveWindow() ; A more elegant way to minimize window
 
@@ -293,7 +293,7 @@ ToggleEverythingToolBar() {
 
 ToggleQalculate() {
     ; Define the path to qalculate using the A_UserName variable
-    qalculatePath := "C:\Users\" A_UserName "\scoop\apps\Qalculate\current\qalculate-gtk.exe"
+    qalculatePath := "C:\Users\" A_UserName "\scoop\apps\qalculate\current\qalculate-qt.exe"
 
     if WinExist("ahk_exe qalculate.exe") {
         WinActivate
