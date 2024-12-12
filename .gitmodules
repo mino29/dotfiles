@@ -1,6 +1,3 @@
 [submodule "common/vim"]
 	path = common/vim
 	url = https://github.com/mino29/minimal_vim.git
-[submodule "common/nvim"]
-	path = common/nvim
-	url = https://github.com/mino29/meovim.git
