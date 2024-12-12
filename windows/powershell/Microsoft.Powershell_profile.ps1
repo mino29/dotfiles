@@ -42,6 +42,10 @@ Set-Alias -Name py -Value python
 Set-Alias -Name ne -Value fastfetch
 Set-Alias -Name neofetch -Value fastfetch
 
+# notepad
+Set-Alias -Name notepad -Value notepad++
+
+
 # ----------------------------    zoxide    -----------------------------------
 # zoxide
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
@@ -53,8 +57,16 @@ Invoke-Expression (& { (zoxide init powershell | Out-String) })
 # -------------------------------    fzf    -----------------------------------
 #
 # fzf fuzzy finder
-# Import-Module PSFzf
-# Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
+Import-Module PSFzf
+Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
+#$env:export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+#$env: export FZF_DEFAULT_OPTS="--layout=reverse --inline-info --ansi --bind ctrl-a:select-all,ctrl-d:deselect-all,ctrl-t:toggle"
+
+
+# Override default tab completion
+#Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
+
+#$env:FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
 
 # ----------------------------    sqlite3    ----------------------------------
 
