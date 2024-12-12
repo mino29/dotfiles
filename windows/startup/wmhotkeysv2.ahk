@@ -210,7 +210,8 @@ TogglePotplayer() {
 #g::ToggleSumatrapdf()
 
 ToggleSumatrapdf() {
-    sumatrapdfPath := "C:\Users\" A_UserName "\scoop\apps\sumatrapdf\current\sumatrapdf.exe"
+    ; sumatrapdfPath := "C:\Users\" A_UserName "\scoop\apps\sumatrapdf\current\sumatrapdf.exe"
+    sumatrapdfPath := "C:\Users\" A_UserName "\AppData\Local\SumatraPdf\SumatraPDF.exe"
     if WinExist("ahk_exe SumatraPDF.exe") {
         WinActivate("ahk_class SUMATRA_PDF_FRAME", "", "bottom")
     } else {
