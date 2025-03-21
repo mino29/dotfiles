@@ -281,7 +281,8 @@ ToggleEverything() {
 ToggleEverythingToolBar() {
     ; Define the path to everything using the A_UserName variable
     ; everythingToolBar := "C:\Users\" A_UserName "\scoop\apps\everything-alpha\current\Everything.exe"
-    everythingToolBarPath := "C:\Program Files (x86)\EverythingToolbar\EverythingToolbar.Launcher.exe"
+    ; everythingToolBarPath := "C:\Program Files (x86)\EverythingToolbar\EverythingToolbar.Launcher.exe"
+    everythingToolBarPath := "C:\Program Files\EverythingToolbar\EverythingToolbar.Launcher.exe"
     if WinExist("ahk_exe EverythingToolbar.Launcher.exe") {
           WinActivate
       } else {
