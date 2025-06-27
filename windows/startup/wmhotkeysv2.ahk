@@ -248,6 +248,7 @@ ToggleFoobar2K() {
 }
 */
 
+/*
 #t::ToggleSpotify()
 
 ToggleSpotify() {
@@ -260,6 +261,22 @@ ToggleSpotify() {
         Run(spotifyPath)
     }
 }
+*/
+
+
+#t::ToggleMusicPlayer()
+
+ToggleMusicPlayer() {
+    ; Define the path to spotify using the A_UserName variable
+    MusicBeePath := "C:\Program Files (x86)\MusicBee\MusicBee.exe"
+
+    if WinExist("ahk_exe MusicBee.exe") {
+        WinActivate
+    } else {
+        Run(MusicBeePath)
+    }
+}
+
 
 /*
 #s::ToggleEverything()

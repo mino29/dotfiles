@@ -1,7 +1,7 @@
 {
   "type" : "preset",
-  "program" : "Advanced Renamer 4.09",
-  "version" : 4090000,
+  "program" : "Advanced Renamer 4.11",
+  "version" : 4110000,
   "batchmode" : "rename",
   "pairrename" : true,
   "namecollision.rule" : "append_number",
@@ -18,9 +18,9 @@
     {
       "methodname" : "removepattern",
       "active" : true,
-      "pattern" : "[4K]",
+      "pattern" : "(4K|-60fps)",
       "casesensitive" : true,
-      "regularexpressions" : false,
+      "regularexpressions" : true,
       "applyto" : "name"
     },
     {
@@ -66,7 +66,7 @@
     {
       "methodname" : "removepattern",
       "active" : true,
-      "pattern" : "^(-|_)",
+      "pattern" : "(-|_)$",
       "casesensitive" : true,
       "regularexpressions" : true,
       "applyto" : "name"
@@ -153,7 +153,15 @@
     {
       "methodname" : "removepattern",
       "active" : true,
-      "pattern" : " .*",
+      "pattern" : "-(zh|ZH)| .*",
+      "casesensitive" : true,
+      "regularexpressions" : true,
+      "applyto" : "name"
+    },
+    {
+      "methodname" : "removepattern",
+      "active" : true,
+      "pattern" : "-(U|A)$",
       "casesensitive" : true,
       "regularexpressions" : true,
       "applyto" : "name"
