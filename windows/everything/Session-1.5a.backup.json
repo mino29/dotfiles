@@ -2,10 +2,10 @@
 	{
 		"is_closed":1,
 		"window_x":621,
-		"window_y":48,
+		"window_y":0,
 		"window_wide":974,
 		"window_high":1032,
-		"maximized":0,
+		"maximized":1,
 		"ontop":0,
 		"filters_visible":0,
 		"filters_wide":128,
@@ -42,7 +42,7 @@
 		[
 			{
 				"is_closed":0,
-				"search":"er0000.sl2",
+				"search":"dontbeadick",
 				"match_case":0,
 				"match_path":0,
 				"match_whole_word":0,
@@ -69,7 +69,7 @@
 				"is_secondary_sort_folders_first":0,
 				"omit_results":0,
 				"temp_omit_results":0,
-				"listview_item_focus":"C:\\Users\\mino29\\AppData\\Roaming\\EldenRing\\76561197960271872\\ER0000.sl2.bak",
+				"listview_item_focus":"",
 				"listview_selection":[],
 				"folders_sidebar_expanded":[],
 				"folders_sidebar_item_focus":"",
