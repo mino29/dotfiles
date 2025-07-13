@@ -11,6 +11,13 @@ UPDATEDSCRIPT() {
         Reload()
     }
 }
+
+; --------------------    Global variables ---------------------------------
+
+; editorpath := "nvim"
+; editorPath := "notepad++"
+editorPath := "C:\Users\" A_UserName "\scoop\apps\notepadplusplus\current\notepad++.exe"
+
 ; --------------------    Real-time Editing   ---------------------------------
 
 #y::EditCurrentScript()
@@ -30,10 +37,6 @@ EditCurrentScript() {
 #HotIf WinActive("ahk_exe WeChat.exe")
 ^w:: Send "{esc}"
 */
-
-
-
-
 
 ; ----------------------------------------------------------------------------
 
@@ -188,7 +191,8 @@ EditTodayNotes() {
     todaynotesPath := "C:\Users\" A_UserName "\Downloads\Quicknotes\Raw\" today "_quicknotes.md"
     ; Run nvim with the file path
     ; Run(wtpath " " powershellpath " " nvimPath " " todaynotesPath)
-    Run(nvimPath " " todaynotesPath)
+    ; Run(nvimPath " " todaynotesPath)
+    Run(editorPath " " todaynotesPath)
 }
 
 
@@ -233,6 +237,8 @@ ToggleCalibre() {
 */
 
 
+; --------------------    Music Player    ---------------------------------
+
 /*
 #t::ToggleFoobar2K()
 
@@ -247,6 +253,10 @@ ToggleFoobar2K() {
     }
 }
 */
+
+; musicPlayerPath := "C:\Program Files (x86)\MusicBee\MusicBee.exe"
+; musicBeePath := "C:\Program Files (x86)\MusicBee\MusicBee.exe"
+
 
 /*
 #t::ToggleSpotify()
@@ -276,6 +286,7 @@ ToggleMusicPlayer() {
         Run(MusicBeePath)
     }
 }
+
 
 
 /*
