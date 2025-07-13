@@ -1,7 +1,7 @@
 {
   "type" : "preset",
-  "program" : "Advanced Renamer 4.11",
-  "version" : 4110000,
+  "program" : "Advanced Renamer 4.13",
+  "version" : 4130000,
   "batchmode" : "rename",
   "pairrename" : true,
   "namecollision.rule" : "append_number",
@@ -18,9 +18,9 @@
     {
       "methodname" : "removepattern",
       "active" : true,
-      "pattern" : "(4K|-60fps)",
+      "pattern" : "[4K]",
       "casesensitive" : true,
-      "regularexpressions" : true,
+      "regularexpressions" : false,
       "applyto" : "name"
     },
     {
@@ -66,7 +66,7 @@
     {
       "methodname" : "removepattern",
       "active" : true,
-      "pattern" : "(-|_)$",
+      "pattern" : "^(-|_)",
       "casesensitive" : true,
       "regularexpressions" : true,
       "applyto" : "name"
@@ -74,7 +74,7 @@
     {
       "methodname" : "removepattern",
       "active" : true,
-      "pattern" : "(_|-)?(x1080x|uncensored)",
+      "pattern" : "(_|-)?(x1080x|uncensored|ai)",
       "casesensitive" : false,
       "regularexpressions" : true,
       "applyto" : "name"
@@ -137,14 +137,6 @@
     {
       "methodname" : "removepattern",
       "active" : true,
-      "pattern" : "(-)?(nyap2p|ai)",
-      "casesensitive" : false,
-      "regularexpressions" : true,
-      "applyto" : "name"
-    },
-    {
-      "methodname" : "removepattern",
-      "active" : true,
       "pattern" : "_(.+|\\d{3})$",
       "casesensitive" : true,
       "regularexpressions" : true,
@@ -153,15 +145,7 @@
     {
       "methodname" : "removepattern",
       "active" : true,
-      "pattern" : "-(zh|ZH)| .*",
-      "casesensitive" : true,
-      "regularexpressions" : true,
-      "applyto" : "name"
-    },
-    {
-      "methodname" : "removepattern",
-      "active" : true,
-      "pattern" : "-(U|A)$",
+      "pattern" : " .*",
       "casesensitive" : true,
       "regularexpressions" : true,
       "applyto" : "name"
