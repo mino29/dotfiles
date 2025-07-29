@@ -181,6 +181,7 @@ ToggleDict(){
 
 #n::EditTodayNotes()
 
+/*
 EditTodayNotes() {
     wtpath := "wt"
     powershellpath := "powershell"
@@ -194,6 +195,13 @@ EditTodayNotes() {
     ; Run(nvimPath " " todaynotesPath)
     Run(editorPath " " todaynotesPath)
 }
+*/
+
+EditTodayNotes() {
+  pythonpath := "python"
+  scriptPath := "C:\Scripts\new-template-note.py"
+  Run(pythonpath " " scriptPath)
+  }
 
 
 #p::TogglePotplayer()
