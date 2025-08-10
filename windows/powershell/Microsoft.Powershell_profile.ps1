@@ -181,7 +181,3 @@ function rename {
 }
 Set-Alias -Name rn -Value rename
 
-# sumatrapdf
-# Get-ChildItem "$PROFILE\..\Completions\" | ForEach-Object {
-#     . $_.FullName
-# }

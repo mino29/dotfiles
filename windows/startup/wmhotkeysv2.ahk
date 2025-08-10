@@ -14,9 +14,9 @@ UPDATEDSCRIPT() {
 
 ; --------------------    Global variables ---------------------------------
 
-; editorpath := "nvim"
+editorpath := "nvim"
 ; editorPath := "notepad++"
-editorPath := "C:\Users\" A_UserName "\scoop\apps\notepadplusplus\current\notepad++.exe"
+; editorPath := "C:\Users\" A_UserName "\scoop\apps\notepadplusplus\current\notepad++.exe"
 
 ; --------------------    Real-time Editing   ---------------------------------
 
@@ -25,9 +25,10 @@ editorPath := "C:\Users\" A_UserName "\scoop\apps\notepadplusplus\current\notepa
 EditCurrentScript() {
     wtpath := "wt"
     powershellpath := "powershell"
+    glazewmConfigPath := "C:\Users\" A_UserName "\.glzr\glazewm\config.yaml"
     nvimPath := "nvim"
     ; Run(wtpath " " powershellpath " " nvimPath " " A_ScriptFullPath)
-    Run(nvimPath " " A_ScriptFullPath)
+    Run(nvimPath " " A_ScriptFullPath " " glazewmConfigPath)
 }
 
 
@@ -47,12 +48,12 @@ EditCurrentScript() {
 ^+d:: FileRecycleEmpty ; 清空回收站
 <#z::Send("{Volume_mute}") ; with gui prompt
 
-; #h::MinimizeActiveWindow()
+#h::MinimizeActiveWindow()
 
 #m::MinimizeActiveWindow() ; A more elegant way to minimize window
 
 MinimizeActiveWindow() {
-    if WinActive("ahk_class WorkerW") { 
+    if WinActive("ahk_class WorkerW") {
         WinActivate("ahk_class Shell_TrayWnd")
     } else {
         WinMinimize("A")
@@ -105,7 +106,7 @@ ToggleThorium() {
 }
 
 
- 
+
 
 
 /*
@@ -396,3 +397,16 @@ toggleTaskMan() {
 }
 
 
+; Toggle glazewm+zebar with shift+alt+e
+
++!e::toggleGlazeWMZebar()
+
+toggleGlazeWMZebar() {
+    if WinExist("ahk_exe glazewm.exe") {
+        ; WinActivate("ahk_exe Taskmgr.exe")
+        ;WinWait("TaskManager", ,2)
+        WinActivate ; TODO: just don't do anything
+    } else {
+        Run("glazewm.exe")
+    }
+}

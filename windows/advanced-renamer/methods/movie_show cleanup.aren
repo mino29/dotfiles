@@ -1,7 +1,7 @@
 {
   "type" : "preset",
-  "program" : "Advanced Renamer 4.12",
-  "version" : 4120000,
+  "program" : "Advanced Renamer 4.14",
+  "version" : 4140000,
   "batchmode" : "rename",
   "pairrename" : true,
   "namecollision.rule" : "fail",
@@ -65,7 +65,7 @@
     {
       "methodname" : "removepattern",
       "active" : true,
-      "pattern" : "jav|videos|NTb|DL|SMURF|donuts|FiDELiO",
+      "pattern" : "jav|videos|NTb|DL|SMURF|donuts|FiDELiO|PHOENiX",
       "casesensitive" : true,
       "regularexpressions" : true,
       "applyto" : "name"
@@ -177,7 +177,7 @@
     },
     {
       "methodname" : "add",
-      "active" : true,
+      "active" : false,
       "position" : "4",
       "add" : ".",
       "backwards" : true,
