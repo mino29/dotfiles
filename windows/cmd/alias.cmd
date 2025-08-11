@@ -4,8 +4,8 @@
 :: to reload cmd.exe for these configs to be effective
 
 
-DOSKEY alias=nvim %USERPROFILE%\alias.cmd
-DOSKEY theme=nvim %USERPROFILE%\scoop\apps\clink\current\oh-my-posh.lua
+DOSKEY alias=nvim "%USERPROFILE%\alias.cmd"
+DOSKEY theme=nvim "%USERPROFILE%\scoop\apps\clink\current\oh-my-posh.lua"
 
 
 :: At startup, cd to this path as default
@@ -43,11 +43,11 @@ DOSKEY :q=exit
 
 :: These are for my lazy ass
 
-DOSKEY v=nvim $*  
-DOSKEY vi=nvim $*  
-DOSKEY vim=nvim $*  
+DOSKEY v=nvim $*
+DOSKEY vi=nvim $*
+DOSKEY vim=nvim $*
 
-DOSKEY py=python $*  
+DOSKEY py=python $*
 
 :: Common directories
 
@@ -64,6 +64,8 @@ DOSKEY ~="%USERPROFILE%\"
 :: z.lua related
 set PATH=%PATH%;%USERPROFILE%\scoop\apps\clink\current
 
+:: fastreload
+DOSKEY reload=cmd
 
 :: the correct path of this file
 :: C:\Users\Public\alias.cmd
