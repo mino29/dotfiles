@@ -66,14 +66,15 @@ In the common folder are thoese programs configs that shared the same config fil
 
 <details>
 
-- windows terminal theme: nord
+- windows terminal theme: Tokyonight
 - oh-my-posh theme: polarnord(I tweaked some color from peru)
 - oh-my-posh theme: pwsh10k_norse(Heavily modified powerlevel10k_rainbow)
+- Starship theme: default theme
 - font: [Hack NF](https://github.com/ryanoasis/nerd-fonts)
 - terminal icons: lsd (available on linux )
 - task manager: btop4win (available on linux as btop)
 - file explore: lf (available on linux)
-- winfetch
+- fastfetch
 - neovim
 - everything
 - JPEGView

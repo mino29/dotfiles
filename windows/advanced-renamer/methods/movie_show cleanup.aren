@@ -49,7 +49,7 @@
     {
       "methodname" : "removepattern",
       "active" : true,
-      "pattern" : "japanese|chinese|cn|中文|english|german",
+      "pattern" : "japanese|chinese|cn|中文|english|german|eng",
       "casesensitive" : false,
       "regularexpressions" : true,
       "applyto" : "name"
@@ -65,7 +65,7 @@
     {
       "methodname" : "removepattern",
       "active" : true,
-      "pattern" : "jav|videos|NTb|DL|SMURF|donuts|FiDELiO|PHOENiX",
+      "pattern" : "jav|videos|NTb|DL|SMURF|donuts|FiDELiO|PHOENiX|Erai-raws",
       "casesensitive" : true,
       "regularexpressions" : true,
       "applyto" : "name"
@@ -81,7 +81,15 @@
     {
       "methodname" : "removepattern",
       "active" : true,
-      "pattern" : "(720p|1080p|2160p|HD|4K|60fps).+",
+      "pattern" : "\\)",
+      "casesensitive" : true,
+      "regularexpressions" : true,
+      "applyto" : "name"
+    },
+    {
+      "methodname" : "removepattern",
+      "active" : true,
+      "pattern" : "(480|720|1080|2160|HD|HQ|4K|60fps)p.*",
       "casesensitive" : false,
       "regularexpressions" : true,
       "applyto" : "name"
@@ -97,7 +105,7 @@
     {
       "methodname" : "removepattern",
       "active" : true,
-      "pattern" : "KNiVES|rarbg|rartv|RARBG|NOGRP|NF|MZABI|GHOSTS|CM",
+      "pattern" : "KNiVES|rarbg|rartv|RARBG|NOGRP|NF|MZABI|GHOSTS|CM|Proper|Anime Time ",
       "casesensitive" : true,
       "regularexpressions" : true,
       "applyto" : "name"
@@ -105,14 +113,14 @@
     {
       "methodname" : "removepattern",
       "active" : true,
-      "pattern" : "Full|Game|Walkthrough|\\(|\\)",
+      "pattern" : "Full|Game|Walkthrough|\\(|\\)|remastered|repack",
       "casesensitive" : false,
       "regularexpressions" : true,
       "applyto" : "name"
     },
     {
       "methodname" : "removepattern",
-      "active" : false,
+      "active" : true,
       "pattern" : "19\\d\\d|20\\d\\d",
       "casesensitive" : true,
       "regularexpressions" : true,
@@ -169,7 +177,7 @@
     },
     {
       "methodname" : "removepattern",
-      "active" : true,
+      "active" : false,
       "pattern" : "\\.$",
       "casesensitive" : true,
       "regularexpressions" : true,
@@ -183,6 +191,70 @@
       "backwards" : true,
       "applyto" : "name",
       "regularexpressions" : false
+    },
+    {
+      "methodname" : "add",
+      "active" : false,
+      "position" : "1",
+      "add" : "<FolderName:1>.",
+      "backwards" : false,
+      "applyto" : "name",
+      "regularexpressions" : false
+    },
+    {
+      "methodname" : "removepattern",
+      "active" : false,
+      "pattern" : "rip\\.|mottoj\\.",
+      "casesensitive" : false,
+      "regularexpressions" : true,
+      "applyto" : "name"
+    },
+    {
+      "methodname" : "replace",
+      "active" : true,
+      "replace" : "\\.(ac3|criterion).+",
+      "replacewith" : "",
+      "casesensitive" : false,
+      "regularexpressions" : true,
+      "applyto" : "name",
+      "occurrence" : 0
+    },
+    {
+      "methodname" : "replace",
+      "active" : false,
+      "replace" : "\\.",
+      "replacewith" : "",
+      "casesensitive" : false,
+      "regularexpressions" : true,
+      "applyto" : "name",
+      "occurrence" : 3
+    },
+    {
+      "methodname" : "replace",
+      "active" : true,
+      "replace" : "Season\\.",
+      "replacewith" : "S",
+      "casesensitive" : false,
+      "regularexpressions" : true,
+      "applyto" : "name",
+      "occurrence" : 0
+    },
+    {
+      "methodname" : "replace",
+      "active" : true,
+      "replace" : "\\.",
+      "replacewith" : "E",
+      "casesensitive" : false,
+      "regularexpressions" : true,
+      "applyto" : "name",
+      "occurrence" : 3
+    },
+    {
+      "methodname" : "newname",
+      "active" : true,
+      "mask" : "RE.Zero.S01E<Inc Nr:1>",
+      "tagpage" : 1,
+      "applyto" : "name"
     }
   ]
 }

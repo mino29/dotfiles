@@ -106,9 +106,6 @@ ToggleThorium() {
 }
 
 
-
-
-
 /*
 #o::ToggleFireFoxAria2()
 
@@ -121,6 +118,7 @@ ToggleFireFoxAria2() {
 }
 */
 
+/*
 #b::ToggleEdge()
 
 ToggleEdge() {
@@ -129,6 +127,18 @@ ToggleEdge() {
         WinActivate
     } else {
         Run('msedge')
+    }
+}
+*/
+
+#b::ToggleBrowser()
+
+ToggleBrowser() {
+    ; Define the path to Edge using the A_UserName variable
+    if WinExist("ahk_exe chrome.exe") {
+        WinActivate
+    } else {
+        Run('chrome')
     }
 }
 
@@ -346,7 +356,8 @@ ToggleQalculate() {
 ; 启动或切换到招商证券
 #k::launchOrSwitchTdxW()
 launchOrSwitchTdxW(){
-    TdxWPath := "C:\Program Files (x86)\zd_zsone\TdxW.exe"
+    ; TdxWPath := "C:\Program Files (x86)\zd_zsone\TdxW.exe"
+    TdxWPath := "C:\zd_zsone\TdxW.exe"
     if WinExist("ahk_class TdxW_MainFrame_Class") {
         WinActivate("ahk_class TdxW_MainFrame_Class", "", "bottom")
     } else {
