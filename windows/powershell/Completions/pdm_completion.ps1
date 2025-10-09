@@ -4,7 +4,7 @@ if ((Test-Path Function:\TabExpansion) -and -not (Test-Path Function:\_pdm_compl
     Rename-Item Function:\TabExpansion _pdm_completeBackup
 }
 
-$PDM_PYTHON = "C:\Users\mino29\scoop\apps\pdm\2.25.5\venv\Scripts\python.exe"
+$PDM_PYTHON = "C:\Users\mino29\scoop\apps\pdm\2.25.9\venv\Scripts\python.exe"
 $PDM_PIP_INDEX = (& $PDM_PYTHON -m pdm config pypi.url).Trim()
 $CONFIG_DIR = "$env:LOCALAPPDATA\pdm"
 

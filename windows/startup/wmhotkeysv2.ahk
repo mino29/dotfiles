@@ -308,7 +308,6 @@ ToggleMusicPlayer() {
 
 
 
-/*
 #s::ToggleEverything()
 
 ToggleEverything() {
@@ -321,8 +320,8 @@ ToggleEverything() {
         Run(everythingPath)
     }
 }
-*/
 
+/*
 #s::ToggleEverythingToolBar()
 
 ToggleEverythingToolBar() {
@@ -336,6 +335,7 @@ ToggleEverythingToolBar() {
           Run(everythingToolBarPath)
       }
 }
+*/
 
 
 #j::ToggleQalculate()
