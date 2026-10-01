@@ -181,6 +181,3 @@ function rename {
 }
 Set-Alias -Name rn -Value rename
 
-Get-ChildItem "$PROFILE\..\Completions\" | ForEach-Object {
-    . $_.FullName
-}
