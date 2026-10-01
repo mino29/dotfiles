@@ -1,0 +1,43 @@
+# Normalize text files to LF in the repo.
+# core.autocrlf=true alone caused 174 shell/pwsh scripts to be checked out
+# with CRLF, which breaks them when executed directly.
+* text=auto eol=lf
+
+# Executable scripts: force LF, never CRLF.
+*.sh    text eol=lf
+*.bash  text eol=lf
+*.zsh   text eol=lf
+*.ps1   text eol=lf
+*.psm1  text eol=lf
+*.psd1  text eol=lf
+*.cmd   text eol=lf
+*.bat   text eol=lf
+*.py    text eol=lf
+*.lua   text eol=lf
+
+# Config that must stay byte-exact.
+.gitconfig      text eol=lf
+.gitignore      text eol=lf
+.gitattributes  text eol=lf
+
+# Windows-native files that expect CRLF.
+*.reg   text eol=crlf
+
+# Binary: never touch line endings.
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.svg   text eol=lf
+*.ttf   binary
+*.otf   binary
+*.woff  binary
+*.woff2 binary
+*.cur   binary
+*.lnk   binary
+*.dll   binary
+*.exe   binary
+*.aren  binary
+*.nupkg binary
+*.msixbundle binary
