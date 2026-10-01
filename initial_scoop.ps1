@@ -31,19 +31,14 @@ iex "& {$(iwr -useb scoop.201704.xyz)} -RunAsAdmin"
 
 # 执行安装命令 (non admin)
 # iwr -useb scoop.201704.xyz | iex
-# iwr -useb https://gitee.com/RubyKids/scoop-cn/raw/master/install.ps1 | iex
+# iwr -useb https://raw.githubusercontent.com/ScoopInstaller/Install/master/install.ps1 | iex
 
 # 更换scoop的repo地址
 
-# cn mirror repo
-scoop config SCOOP_REPO 'https://gitee.com/glsnames/scoop-installer'
-
 # official repo
-# scoop config SCOOP_REPO 'https://github.com/ScoopInstaller/Scoop'
+scoop config SCOOP_REPO 'https://github.com/ScoopInstaller/Scoop'
 
 # backup repos
-# scoop config SCOOP_REPO 'https://github.com/lukesampson/scoop'
-# scoop config SCOOP_REPO 'https://gitee.com/squallliu/scoop'
 # scoop config SCOOP_REPO 'https://github.com/Ash258/Scoop-Core'
 
 # 拉取新库地址

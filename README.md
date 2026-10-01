@@ -133,7 +133,6 @@ sometimes use Arch for WSL2.
 [ ] downsize all files to < 10 MB in total
 [ ] oh-my-posh consistent transient prompt
 [ ] more testing to ensure robustness
-[ ] add gitee repo sync for more download options
 [ ] smarter auto-completion for meovim
 [ ] useful programs that are outside of winget/choco/scoop
 [ ] automatically set accent color, wallpaper, lock screen
@@ -162,5 +161,4 @@ sometimes use Arch for WSL2.
 Authored and maintained by Mino Woo.
 
 [@GitHub](https://github.com/mino29)
-[@Gitee](https://gitee.com/wooinkling)
 

@@ -64,7 +64,7 @@ pacman -Sy archlinuxcn-keyring
 #### oh-my-zsh
 
 ```bash
-sh -c "$(curl -fsSL https://gitee.com/mirrors/oh-my-zsh/raw/master/tools/install.sh)" "" --unattended
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 ```
 
