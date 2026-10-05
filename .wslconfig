@@ -1,0 +1,11 @@
+[wsl2]
+# networkingMode=mirrored was found to break Docker published ports: containers
+# bound to 127.0.0.1 or 0.0.0.0 inside WSL were unreachable from Windows, while
+# ordinary WSL listeners worked. Docker's forwarding relies on iptables rules in
+# the WSL kernel, which the mirrored stack does not traverse.
+# NAT mode is the standard, well-tested combination for Docker on WSL2 and
+# provides localhostForwarding so Windows reaches WSL ports on 127.0.0.1.
+networkingMode=nat
+
+# Keep the VM alive when no interactive session is attached.
+vmIdleTimeout=-1
