@@ -1,0 +1,15 @@
+[Unit]
+# Re-export Docker's published ports onto the ports Windows actually uses.
+# See wsl-docker-port-relay.sh for why this is needed under WSL mirrored mode.
+Description=Relay Docker published ports onto the Windows-visible loopback
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/wsl-docker-port-relay
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
